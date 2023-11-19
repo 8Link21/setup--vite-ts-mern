@@ -12,8 +12,8 @@
   },
   "scripts": {
     "setup": "npm install && cd server && npm install && cd ../client && npm install && npm init @eslint/config",
-    "dev": "concurrently \"cd server && nodemon ./config/www.mjs\" \"cd client && npm run dev\" \"cd client && npm run sass\"",
-    "dev-server": "nodemon ./server/config/www.mjs",
+    "dev-server": "cd server && nodemon ./config/www.mjs",
     "dev-client": "concurrently \"cd client && npm run dev\" \"cd client && npm run sass\""
+    "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\"",
   }
 }
