@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
-import 'dotenv/config'
+// // Import .env file from /server folder
+// import 'dotenv/config'
+
+import dotenv from 'dotenv'
+dotenv.config({ path: './config/.env' })
 
 import mongoose from './mongo.mjs'
 import app from '../server.mjs'
